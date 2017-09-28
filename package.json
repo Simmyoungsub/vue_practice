@@ -1,0 +1,28 @@
+{
+  "name": "vue_practice",
+  "version": "1.0.0",
+  "description": "vue_practice",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -p -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simmyoungsub/vue_practice.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "myoungsubsim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Simmyoungsub/vue_practice/issues"
+  },
+  "homepage": "https://github.com/Simmyoungsub/vue_practice#readme",
+  "devDependencies": {
+    "jshint": "^2.9.5",
+    "jshint-loader": "^0.8.4",
+    "webpack": "^3.6.0"
+  }
+}
