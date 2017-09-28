@@ -1,0 +1,43 @@
+<!doctype>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <!-- <div>
+        {{message}}
+      </div>
+      <div id="app-2">
+        <!--
+          v-bind - 디렉티브
+          렌더링 된 DOM에 특수한 반응형 동작을 함
+      -->
+        <!-- <span v-bind="message">
+          binding!
+        </span>
+      </div>-->
+      <a href="#" target="_blank">click</a>
+    </div>
+    <div id="app-3">
+      <p v-if='seen'>
+        I see you
+      </p>
+      <p>
+        {{message}}
+      </p>
+      <button v-on:click="toggle">toggle key</button>
+      <ol>
+        <li v-for="todo in todos">
+          {{todo.text}}
+        </li>
+      </ol>
+      <!--
+        v-model 양방향 바인딩
+      -->
+      <input type="text" v-model="message" />
+    </div>
+  </body>
+  <script type="text/javascript" src="../../../dist/bundle.js"></script>
+</html>
