@@ -1,0 +1,39 @@
+<!doctype>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
+    <script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+  </head>
+  <body>
+      <div id="render-example">
+          <h1 v-if="ok">Yes</h1>
+          <h1 v-else>No</h1>
+          <p v-if="type === 'A'">
+              A
+          </p>
+          <p v-else-if="type === 'B'">
+              B
+          </p>
+          <p v-else>
+              C
+          </p>
+          <template v-if="loginType === 'username'">
+              <!-- label은 재사용을 통해 효율성 향상 -->
+              <label>사용자 이름</label>
+              <!-- 두 템플릿 모두 같은 요소를 사용하므로 loginType이 변경되어도 input은 대체되지 않음 -->
+              <!-- <input type="text" placeholder="사용자 이름을 입력하세요" /> -->
+              <!-- key속성을 사용하여 두개의 input은 다른것이라고 명시적으로 표시하여 재사용을 방지 -->
+              <input type="text" placeholder="사용자 이름을 입력하세요" key="username-input" />
+          </template>
+          <template v-else>
+              <label>이메일</label>
+              <!-- 두 템플릿 모두 같은 요소를 사용하므로 loginType이 변경되어도 input은 대체되지 않음 -->
+              <!-- <input type="text" placeholder="이메일 주소를 입력하세요" /> -->
+              <input type="text" placeholder="이메일 주소를 입력하세요" key="email-input"/>
+          </template>
+          <button v-on:click="onClick">로그인 유형 변경</button>
+      </div>
+  </body>
+  <script type="text/javascript" src="../../../dist/bundle.js"></script>
+</html>

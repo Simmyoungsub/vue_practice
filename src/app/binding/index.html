@@ -11,9 +11,20 @@
         <div class="static" v-bind:class="classObject">
             hello
         </div>
-    </div>
-    <div class="static" v-bind:class="classObject">
-        hello
+        <div class="static" v-bind:class="classObject">
+            hello
+        </div>
+        <!-- 컵포넌트 적용 -->
+        <my-component v-bind:class="{active: isActive}" v-bind:style="styleObject"></my-component>
+        <!-- base style -->
+        <div class="static" v-bind:class="classObject" v-bind:style="baseStyleObject">
+            Base
+        </div>
+        <!-- base + override style -->
+        <!-- 여러개의 object를 적용할 때에는 배열을 사용 -->
+        <div class="static" v-bind:class="classObject" v-bind:style="[baseStyleObject,overrideStyleObject]">
+            Override
+        </div>
     </div>
   </body>
   <script type="text/javascript" src="../../../dist/bundle.js"></script>
